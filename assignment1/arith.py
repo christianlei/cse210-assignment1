@@ -10,7 +10,7 @@ def main():
     string_parser.string_to_AST()
     result = interpreter.eval(string_parser.ast)
     print(result)
-    return result
+    return
 
 
 if __name__ == '__main__':

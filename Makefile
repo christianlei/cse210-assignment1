@@ -1,3 +1,3 @@
 # my first makefile!
 all:
-	pyinstaller --onefile assignment1/arith.py
+	pyinstaller --onefile --distpath ./ assignment1/arith.py
