@@ -8,6 +8,6 @@ class BinOp(AST):
         self.right = right
 
 class Num(AST):
-    def __init__(self, token):
+    def __init__(self, token, value):
         self.token = token
-        self.value = token.value
+        self.value = value

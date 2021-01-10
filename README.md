@@ -2,6 +2,6 @@
 
 ## Christian Lei
 
-### Credit:
+### Referenes:
 
 ### https://ruslanspivak.com/lsbasi-part7/
