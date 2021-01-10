@@ -13,8 +13,12 @@ class Parser:
                 bin_op = BinOp(ast, '+', Num('int', self.parsed_list.pop(0)))
                 ast = bin_op
             elif item == '*':
-                bin_op = BinOp(ast, '*', Num('int', self.parsed_list.pop(0)))
-                ast = bin_op
+                if isinstance(ast, BinOp) and ast.op == '+':
+                    mult_node = BinOp(ast.right, '*', Num('int', self.parsed_list.pop(0)))
+                    ast.right = mult_node
+                else:
+                    bin_op = BinOp(ast, '*', Num('int', self.parsed_list.pop(0)))
+                    ast = bin_op
             else:
                 num = Num('int' ,item)
                 ast = num
