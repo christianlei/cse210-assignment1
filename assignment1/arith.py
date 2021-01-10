@@ -2,6 +2,7 @@ import argparse
 from parser import Parser
 from interpreter import Interpreter
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('exp_str', type=str)
@@ -13,6 +14,7 @@ def main():
     result = interpreter.eval(string_parser.ast)
     print(result)
     return result
+
 
 if __name__ == '__main__':
     main()

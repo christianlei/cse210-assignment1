@@ -1,4 +1,5 @@
-from ast import BinOp, Num 
+from binop import BinOp
+from num import Num 
 
 class Interpreter:
 

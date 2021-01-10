@@ -1,3 +1,3 @@
 # my first makefile!
-arith 
-	python main.py
+all:
+	pyinstaller --onefile assignment1/arith.py
