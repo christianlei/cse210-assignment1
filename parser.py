@@ -1,3 +1,5 @@
+from ast import BinOp, Num 
+
 class Parser:
     def __init__(self, parsed_string):
         self.ast = None
@@ -5,16 +7,16 @@ class Parser:
 
     def string_to_AST(self):
         ast = None
-        while not self.parsed_list:
+        while self.parsed_list:
             item = self.parsed_list.pop(0)
             if item == '+':
-                bin_op = BinOp(ast, '+', Num(self.parsed_list.pop(0)))
-                prev_item = bin_op
+                bin_op = BinOp(ast, '+', Num('int', self.parsed_list.pop(0)))
+                ast = bin_op
             elif item == '*':
-                bin_op = BinOp(ast, '+', Num(self.parsed_list.pop(0)))
-                prev_item = bin_op
+                bin_op = BinOp(ast, '*', Num('int', self.parsed_list.pop(0)))
+                ast = bin_op
             else:
                 num = Num('int' ,item)
-                prev_item = num
-                
+                ast = num
+
         self.ast = ast

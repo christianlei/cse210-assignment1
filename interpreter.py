@@ -10,4 +10,4 @@ class Interpreter:
                 return self.eval(ast.left) * self.eval(ast.right)
 
         if isinstance(ast, Num):
-            return ast.value
+            return int(ast.value)
