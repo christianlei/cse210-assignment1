@@ -1,13 +1,13 @@
+from ast import BinOp, Num 
+
 class Interpreter:
 
     def eval(self, ast):
-                
+        if isinstance(ast, BinOp):
+            if ast.op == '+':
+                return self.eval(ast.left) + self.eval(ast.right)
+            if ast.op == '*':
+                return self.eval(ast.left) * self.eval(ast.right)
 
-
-        def eval(self, ast):
-        if intExp is not None:
-            return intExp
-        if sumExp is not None:
-            return eval(sumExp[0]) + eval(sumExp[1])
-        if mulExp is not None:
-            return eval(mulExp[0]) * eval(mulExp[1])
+        if isinstance(ast, Num):
+            return ast.value
