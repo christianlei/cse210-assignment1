@@ -4,7 +4,7 @@
 
 ### Libraries Used:
 
-### - Argparse
+### - pyinstaller
 
 ### Referenes:
 
