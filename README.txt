@@ -2,7 +2,7 @@ CSE 210A -- Assignment 1
 Christian Lei
 
 Notes:
-I ran this in a virutal environment to make the executable.
+I ran this in a python virtual environment that has pyinstaller. To run the program either use python or the executable.
 
 Libraries used: 
 Pyinstaller

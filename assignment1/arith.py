@@ -3,7 +3,7 @@ from interpreter import Interpreter
 
 
 def main():
-    val = input() 
+    val = input()
     string_parser = Parser(val)
     interpreter = Interpreter()
 
